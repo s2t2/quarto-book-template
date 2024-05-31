@@ -1,0 +1,40 @@
+---
+title: "This is a Title"
+subtitle: "This is a Subtitle"
+author: "Your Name Here"
+date: "May 31, 2024"
+#bibliography: references.bib
+#abstract: "This is an abstract. \n\n\n\n\n\n\n\nAbstract."
+
+#toc: true
+#toc-depth: 2
+#toc-title: "Contents"
+
+format:
+  html: default
+  pdf: default
+  #pdf: #default
+  #  # https://ctan.org/pkg/koma-script
+  #  # article, report, book, scrartcl, scrreprt, scrbook
+  #  documentclass: article
+  #  classoption: [twocolumn, landscape]
+  #  # list of figures, list of tables:
+  #  #lof: true
+  #  #lot: true
+  #  #geometry:
+  #  #  - top=30mm
+  #  #  - left=20mm
+  #  #  - heightrounded
+  #  fontfamily: libertinus
+  #  colorlinks: true
+  #  cite-method: biblatex
+  #  #keep-tex: true
+
+
+---
+
+
+
+# Quarto Book
+
+This is an example content publishing toolchain template, using [Quarto](https://quarto.org).

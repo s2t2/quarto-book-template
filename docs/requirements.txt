@@ -1,0 +1,11 @@
+
+
+
+# packages to facilitate quarto execution of IPYNB notebooks:
+# if you execute: true
+#jupyter
+
+
+# packages required by any python code / notebooks:
+numpy
+matplotlib

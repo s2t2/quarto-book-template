@@ -1,0 +1,22 @@
+
+
+.DS_Store
+
+docs/_build/
+
+#docs/.quarto
+
+# wtf are these files and why are they in the docs folder not the build folder?
+# (they are temporary files that appear during PDF generation and/or preview?)
+docs/*.aux
+docs/*.bcf
+docs/*.logs
+docs/*.bcf
+docs/*.html
+docs/*.log
+docs/*.run.xml
+docs/*.tex
+docs/*.toc
+
+#ignore PDF output:
+docs/*.pdf
