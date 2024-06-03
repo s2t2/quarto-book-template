@@ -1,9 +1,17 @@
 
+
+
+
+
 html:
 	quarto render docs/
 
 open-html:
 	open docs/_build/index.html
+
+
+autodoc:
+	quartodoc build --config docs/_quarto.yml --verbose
 
 
 

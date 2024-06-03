@@ -6,9 +6,11 @@ date: "May 31, 2024"
 #bibliography: references.bib
 #abstract: "This is an abstract. \n\n\n\n\n\n\n\nAbstract."
 
-#toc: true
+#format: pdf
+toc: true
 #toc-depth: 2
 #toc-title: "Contents"
+number-sections: true
 
 format:
   html: default

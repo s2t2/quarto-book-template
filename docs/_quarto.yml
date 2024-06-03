@@ -1,79 +1,149 @@
+#project:
+#  type: website
+#  output-dir: _build
+#  preview:
+#    port: 5896
+#    browser: true
+#  render:
+#    - "index.qmd"
+#    - "about.qmd"
+#    - "contact.md"
+#    - "demo-notebook.ipynb"
+#    - "python-example.qmd"
+#    #- "talks/index.qmd"
+#    #- "talks/**/*.qmd"
+#    #- "blog/index.qmd"
+#    #- "blog/**/*.qmd"
+#    #- "research/**/*.qmd"
+#    #- "!research/template.qmd"
+#  #resources:
+#  #  - "content/"
+#  #  - "css"
+#  #  - "splitkbcompare.html"
+#  #  - "static/"
+#
+#website:
+#  title: "quarto-book-template"
+#  description: "A repository template for creating documentation with Quarto"
+#  #image: images/path/to/image.png
+#  #site-url: https://www.example.com
+#  #favicon: images/favicon/favicon.ico
+#  repo-url: https://github.com/s2t2/quarto-book-template
+#  search:
+#    location: navbar
+#    type: overlay
+#  back-to-top-navigation: true
+#  #google-analytics: "G-_______"
+#
+#  navbar:
+#    right:
+#      - text: "About"
+#        href: about.qmd
+#      - text: "Contact"
+#        href: contact.md
+#      - text: "Python Code"
+#        href: python-example.qmd
+#      - text: "Notebook"
+#        href: demo-notebook.ipynb
+#
+#      #- icon: list
+#      #  menu:
+#      #    - icon: github
+#      #      href: https://github.com/________
+#      #      aria-label: GitHub
+#      #      target: blank
+#      #    - icon: linkedin
+#      #      href: https://www.linkedin.com/in/___________
+#      #      target: blank
+#      #    - text: "<i class='ai ai-google-scholar fa-lg'></i>"
+#      #      href: https://scholar.google.com/citations?user=________
+#      #      target: blank
+#      #    - text: "<i class='ai ai-orcid fa-lg'></i>"
+#      #      href: https://orcid.org/__________________
+#      #      target: blank
+#      #    - icon: rss-fill
+#      #      href: blog.xml
+#      #      target: blank
+#  page-footer:
+#    center:
+#      - text: "© 2024 Your Name Here<br>Source <a href='https://github.com/s2t2/quarto-book-template' target='_blank'><i class='bi bi-git'></i></a>"
+#
+#format:
+#  html:
+#    theme: [default] # [default, css/theme.scss]
+#    anchor-sections: true
+#    smooth-scroll: true
+#    link-external-newwindow: true
+#    link-external-icon: false
+#    # This is to include fontawesome and academic icons in the headers:
+#    #include-in-header: "_includes/header.html"
+#
+
+
+
+
+
+
 project:
   type: website
-  output-dir: _build
-  preview:
-    port: 5896
-    browser: true
-  render:
-    - "index.qmd"
-    - "about.qmd"
-    - "contact.md"
-    - "demo-notebook.ipynb"
-    - "python-example.qmd"
-    #- "talks/index.qmd"
-    #- "talks/**/*.qmd"
-    #- "blog/index.qmd"
-    #- "blog/**/*.qmd"
-    #- "research/**/*.qmd"
-    #- "!research/template.qmd"
-  #resources:
-  #  - "content/"
-  #  - "css"
-  #  - "splitkbcompare.html"
-  #  - "static/"
+
+# tell quarto to read the generated sidebar
+#metadata-files:
+#  - _sidebar.yml
 
 website:
-  title: "quarto-book-template"
-  description: "A repository template for creating documentation with Quarto"
-  #image: images/path/to/image.png
-  #site-url: https://www.example.com
-  #favicon: images/favicon/favicon.ico
-  repo-url: https://github.com/s2t2/quarto-book-template
-  search:
-    location: navbar
-    type: overlay
-  back-to-top-navigation: true
-  #google-analytics: "G-_______"
-
+  title: "This is a site"
   navbar:
-    right:
-      - text: "About"
-        href: about.qmd
-      - text: "Contact"
-        href: contact.md
-      - text: "Python Code"
-        href: python-example.qmd
-      - text: "Notebook"
-        href: demo-notebook.ipynb
-
-      #- icon: list
-      #  menu:
-      #    - icon: github
-      #      href: https://github.com/________
-      #      aria-label: GitHub
-      #      target: blank
-      #    - icon: linkedin
-      #      href: https://www.linkedin.com/in/___________
-      #      target: blank
-      #    - text: "<i class='ai ai-google-scholar fa-lg'></i>"
-      #      href: https://scholar.google.com/citations?user=________
-      #      target: blank
-      #    - text: "<i class='ai ai-orcid fa-lg'></i>"
-      #      href: https://orcid.org/__________________
-      #      target: blank
-      #    - icon: rss-fill
-      #      href: blog.xml
-      #      target: blank
-  page-footer:
-    center:
-      - text: "© 2024 Your Name Here<br>Source <a href='https://github.com/s2t2/quarto-book-template' target='_blank'><i class='bi bi-git'></i></a>"
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - contact.qmd
+      - python-example.qmd
+      - demo-notebook.ipynb
+      - reference/index.qmd
 
 format:
   html:
-    theme: [default] # [default, css/theme.scss]
-    anchor-sections: true
-    smooth-scroll: true
-    link-external-newwindow: true
-    link-external-icon: false
-    # This is to include fontawesome and academic icons in the headers:
-    #include-in-header: "_includes/header.html"
+    theme: cosmo
+    #css: styles.css
+    toc: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# https://machow.github.io/quartodoc/get-started/basic-docs.html
+quartodoc:
+  # the name used to import the package you want to create reference docs for
+  package: my_project
+
+  # write sidebar data to this file
+  #sidebar: _sidebar.yml
+
+  #style: pkgdown
+
+  # directory relative to current (docs/)
+  dir: reference
+
+  sections:
+    - title: Some functions
+      desc: Functions to exemplify auto documentation.
+      contents:
+        #- get_object        # function: quartodoc.get_object
+        #- ast.preview       # submodule func: quartodoc.ast.preview
+        #- MdRenderer        # class: quartodoc.MdRenderer
+        #- MdRenderer.render # method: quartodoc.MDRenderer.render
+        #- renderers         # module: quartodoc.renderers
+        - calculator.Calculator
+        - formatter.to_usd

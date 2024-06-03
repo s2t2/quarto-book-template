@@ -1,0 +1,40 @@
+# calculator.Calculator { #my_project.calculator.Calculator }
+
+`calculator.Calculator()`
+
+The Calculator class. Use for basic math.
+
+This is an example class for testing out auto-documentation capabilities.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [add](#my_project.calculator.Calculator.add) | Add two numbers. |
+| [divide](#my_project.calculator.Calculator.divide) | Divide two numbers. |
+| [multiply](#my_project.calculator.Calculator.multiply) | Multiply two numbers. |
+| [subtract](#my_project.calculator.Calculator.subtract) | Subtract two numbers. |
+
+### add { #my_project.calculator.Calculator.add }
+
+`calculator.Calculator.add(a, b)`
+
+Add two numbers.
+
+### divide { #my_project.calculator.Calculator.divide }
+
+`calculator.Calculator.divide(a, b)`
+
+Divide two numbers.
+
+### multiply { #my_project.calculator.Calculator.multiply }
+
+`calculator.Calculator.multiply(a, b)`
+
+Multiply two numbers.
+
+### subtract { #my_project.calculator.Calculator.subtract }
+
+`calculator.Calculator.subtract(a, b)`
+
+Subtract two numbers.
