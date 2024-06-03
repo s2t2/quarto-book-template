@@ -1,0 +1,10 @@
+# Function reference {.doc .doc-index}
+
+## Some functions
+
+Functions to exemplify auto documentation.
+
+| | |
+| --- | --- |
+| [calculator.Calculator](calculator.Calculator.qmd#my_project.calculator.Calculator) | The Calculator class. Use for basic math. |
+| [formatter.to_usd](formatter.to_usd.qmd#my_project.formatter.to_usd) | Formats number as USD with dollar sign, two decimal places, and thousands separator. |

@@ -1,11 +1,15 @@
 
 
 
-# packages to facilitate quarto execution of IPYNB notebooks:
-# if you execute: true
-#jupyter
+# packages to facilitate quarto execution of IPYNB notebooks, with execute: true
+# ... or if you use jupyter: python3 to execute python inside code blocks in your .qmd file
+jupyter
 
 
 # packages required by any python code / notebooks:
 numpy
 matplotlib
+
+
+# auto-documentation
+quartodoc

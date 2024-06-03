@@ -20,3 +20,15 @@ docs/*.toc
 
 #ignore PDF output:
 docs/*.pdf
+
+
+
+
+docs/_site
+
+
+
+
+
+__pycache__/
+.pytest_cache
