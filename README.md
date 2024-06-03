@@ -38,10 +38,10 @@ References:
   + https://quarto.org/docs/computations/python.html
   + https://quarto.org/docs/reference/formats/pdf.html
 
-## Usage
+## Building
 
 
-Rendering a doc (performs a build and writes local HTML files to "_build"):
+Rendering a doc (performs a build and writes local HTML files to "__build_" or "__site__"?):
 
 ```sh
 quarto render docs/
@@ -61,6 +61,26 @@ quarto preview docs/
 # preview as pdf
 #quarto preview docs/ --to pdf
 ```
+
+
+### Autodocs
+
+Uses [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html) to auto-document your python package (if that's your use case):
+
+
+
+Auto docs:
+
+```sh
+quartodoc build --config docs/_quarto.yml --verbose
+
+#make autodoc
+```
+
+That will create or update QMD files in the docs/references folder. We check these in, and we point our quarto config file to render a link to the index of this folder. This provides an entrypoint into the auto-documentation.
+
+Then we build the site as normal.
+
 
 
 
