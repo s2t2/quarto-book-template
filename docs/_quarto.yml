@@ -98,7 +98,7 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - contact.qmd
+      - contact.md
       - python-example.qmd
       - demo-notebook.ipynb
       - reference/index.qmd
