@@ -1,0 +1,10 @@
+
+
+
+# packages required by your package (if applicable)
+
+
+
+
+# CI / testing
+pytest
