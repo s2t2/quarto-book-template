@@ -41,7 +41,7 @@ References:
 ## Building
 
 
-Rendering a doc (performs a build and writes local HTML files to "__build_" or "__site__"?):
+Rendering a doc (performs a build and writes local HTML files to "__build_", as configured):
 
 ```sh
 quarto render docs/

@@ -2,6 +2,7 @@
 
 .DS_Store
 
+docs/_site
 docs/_build/
 
 #docs/.quarto
@@ -24,7 +25,6 @@ docs/*.pdf
 
 
 
-docs/_site
 
 
 

@@ -86,6 +86,7 @@
 
 project:
   type: website
+  output-dir: _build
 
 # tell quarto to read the generated sidebar
 #metadata-files:
