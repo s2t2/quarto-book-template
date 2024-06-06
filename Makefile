@@ -1,6 +1,12 @@
 
 
 
+build-book:
+	quartodoc build --config docs/_quarto_book.yml --verbose
+	quarto render docs/ --config docs/_quarto_book.yml --verbose
+	open docs/_book_build/index.html
+
+
 
 
 autodoc:

@@ -4,6 +4,12 @@
 
 docs/_site
 docs/_build/
+docs/_book_build/
+
+
+mybook/_book
+
+
 
 #docs/.quarto
 
