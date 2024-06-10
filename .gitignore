@@ -7,6 +7,16 @@ docs/_build/
 docs/_book/
 
 
+# https://quarto.org/docs/projects/code-execution.html#cache
+# cache directory contains cached outputs (to hasten build time)
+# can consider checking in this directory (for faster production builds)
+docs/.jupyter_cache
+
+# https://quarto.org/docs/projects/code-execution.html
+# freeze directory contains cached outputs (to hasten build time)
+# can consider checking in the _freeze directory (for faster production builds)
+docs/_freeze
+# not working?
 
 
 

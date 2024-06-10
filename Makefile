@@ -11,8 +11,10 @@ build:
 	quarto render docs/ --verbose
 
 # can run after make build (may need to change name of PDF to match book name in the _config.yml)
-open:
+open-pdf:
 	open docs/_book/My-Quarto-Book.pdf
+
+open-html:
 	open docs/_book/index.html
 
 

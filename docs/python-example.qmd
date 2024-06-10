@@ -1,9 +1,14 @@
 ---
-title: "matplotlib demo"
+#title: "Python Markdown Example"
 format:
   html:
     code-fold: true
 jupyter: python3
+# https://quarto.org/docs/projects/code-execution.html
+execute:
+  #freeze: auto  # re-render only when source changes? Not working?
+  cache: true
+  #enabled: true # always execute contents (ipynb files not executed by default)
 ---
 
 # Python Example
