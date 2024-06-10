@@ -4,10 +4,9 @@
 
 docs/_site
 docs/_build/
-docs/_book_build/
+docs/_book/
 
 
-mybook/_book
 
 
 
