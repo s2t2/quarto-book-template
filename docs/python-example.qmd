@@ -7,11 +7,11 @@ jupyter: python3
 # https://quarto.org/docs/projects/code-execution.html
 execute:
   #freeze: auto  # re-render only when source changes? Not working?
-  cache: true
+  cache: true # re-render only when source changes
   #enabled: true # always execute contents (ipynb files not executed by default)
 ---
 
-# Python Example
+# Python Markdown Example
 
 For a demonstration of a line plot on a polar axis, see @fig-polar.
 

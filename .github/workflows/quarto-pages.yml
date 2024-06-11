@@ -28,17 +28,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    # INSTALL QUARTO
-    - name: Set up Quarto
-      uses: quarto-dev/quarto-actions/setup@v2
-      #env:
-      #  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        # To install LaTeX to build PDF book
-        # (to get past errors on the CI build)
-        tinytex: true
-        # uncomment below and fill to pin a version
-        # version: SPECIFIC-QUARTO-VERSION-HERE
+    #
+    # PYTHON STUFF
+    #
 
     # INSTALL PYTHON
     - name: Set up Python 3.11
@@ -56,10 +48,62 @@ jobs:
       run: |
         pip install -r docs/requirements.txt
 
-    # Save the book's HTML contents to the _build directory
+    #
+    # R STUFF
+    # https://github.com/jhelvy/jhelvy_quarto/blob/main/.github/workflows/main.yml
+    #
+
+    #- uses: r-lib/actions/setup-r@v2
+    #- uses: r-lib/actions/setup-pandoc@v2
+    #- name: Query dependencies
+    #  run: |
+    #    options(download.file.method = "libcurl")
+    #    options(repos = "https://cran.rstudio.com")
+    #    install.packages('remotes')
+    #    saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+    #  shell: Rscript {0}
+    #
+    #- name: Cache R packages
+    #  uses: actions/cache@v1
+    #  with:
+    #    path: ${{ env.R_LIBS_USER }}
+    #    key: macOS-r-3.6-${{ hashFiles('.github/depends.Rds') }}
+    #    restore-keys: macOS-r-3.6-
+    #
+    #- name: Install system dependencies
+    #  run: |
+    #    brew install libgit2
+    #
+    #- name: Install dependencies
+    #  run: |
+    #    install.packages("remotes")
+    #    remotes::install_deps(dependencies = TRUE)
+    #  shell: Rscript {0}
+
+    #
+    # QUARTO STUFF
+    #
+
+    # INSTALL QUARTO
+    - name: Set up Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+      #env:
+      #  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        # To install LaTeX to build PDF book
+        # (to get past errors on the CI build)
+        tinytex: true
+        # uncomment below and fill to pin a version
+        # version: SPECIFIC-QUARTO-VERSION-HERE
+
+    # SAVE AS HTML (SEE docs/_build OR docs/_book)
     - name: Build the book
       run: |
         quarto render docs/
+
+    #
+    # GITHUB PAGES STUFF
+    #
 
     # Upload the book's HTML as an artifact
     - name: Upload artifact

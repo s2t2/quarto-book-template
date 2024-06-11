@@ -2,7 +2,7 @@
 
 # My Article - Topic Here
 
-## Abstract
+## Abstract {.unnumbered}
 
 One paragraph. Executive summary of the article
 
@@ -10,11 +10,13 @@ One paragraph. Executive summary of the article
 
 The intro paragraph. Provides background info.
 
-## Results
+## Results {#sec-results}
 
 Awesome results. Ground breaking. Truly.
 
-## Methods
+See @sec-methods for more information.
+
+## Methods {#sec-methods}
 
 Novel methods. So smart. Step by step.
 
@@ -32,7 +34,7 @@ We trained some models.
 
 Here's how this apples. Who cares?
 
-## References
+# References {.unnumbered}
 
 ::: {#refs}
 :::
