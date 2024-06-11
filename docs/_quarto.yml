@@ -1,129 +1,137 @@
-#project:
-#  type: website
-#  output-dir: _build
-#  preview:
-#    port: 5896
-#    browser: true
-#  render:
-#    - "index.qmd"
-#    - "about.qmd"
-#    - "contact.md"
-#    - "demo-notebook.ipynb"
-#    - "python-example.qmd"
-#    #- "talks/index.qmd"
-#    #- "talks/**/*.qmd"
-#    #- "blog/index.qmd"
-#    #- "blog/**/*.qmd"
-#    #- "research/**/*.qmd"
-#    #- "!research/template.qmd"
-#  #resources:
-#  #  - "content/"
-#  #  - "css"
-#  #  - "splitkbcompare.html"
-#  #  - "static/"
 #
-#website:
-#  title: "quarto-book-template"
-#  description: "A repository template for creating documentation with Quarto"
-#  #image: images/path/to/image.png
-#  #site-url: https://www.example.com
-#  #favicon: images/favicon/favicon.ico
-#  repo-url: https://github.com/s2t2/quarto-book-template
-#  search:
-#    location: navbar
-#    type: overlay
-#  back-to-top-navigation: true
-#  #google-analytics: "G-_______"
+# QUARTO WEBSITES:
+# https://quarto.org/docs/websites/
+# https://github.com/jhelvy/jhelvy_quarto/blob/main/_quarto.yml
+# https://github.com/pingfan-hu/Pingfan-Website/blob/main/_quarto.yml
 #
-#  navbar:
-#    right:
-#      - text: "About"
-#        href: about.qmd
-#      - text: "Contact"
-#        href: contact.md
-#      - text: "Python Code"
-#        href: python-example.qmd
-#      - text: "Notebook"
-#        href: demo-notebook.ipynb
+# QUARTO BOOKS:
+# https://quarto.org/docs/books/
+# https://github.com/jjallaire/visualization-curriculum/blob/master/_quarto.yml
+# https://github.com/hadley/r4ds/blob/main/_quarto.yml
 #
-#      #- icon: list
-#      #  menu:
-#      #    - icon: github
-#      #      href: https://github.com/________
-#      #      aria-label: GitHub
-#      #      target: blank
-#      #    - icon: linkedin
-#      #      href: https://www.linkedin.com/in/___________
-#      #      target: blank
-#      #    - text: "<i class='ai ai-google-scholar fa-lg'></i>"
-#      #      href: https://scholar.google.com/citations?user=________
-#      #      target: blank
-#      #    - text: "<i class='ai ai-orcid fa-lg'></i>"
-#      #      href: https://orcid.org/__________________
-#      #      target: blank
-#      #    - icon: rss-fill
-#      #      href: blog.xml
-#      #      target: blank
-#  page-footer:
-#    center:
-#      - text: "© 2024 Your Name Here<br>Source <a href='https://github.com/s2t2/quarto-book-template' target='_blank'><i class='bi bi-git'></i></a>"
-#
-#format:
-#  html:
-#    theme: [default] # [default, css/theme.scss]
-#    anchor-sections: true
-#    smooth-scroll: true
-#    link-external-newwindow: true
-#    link-external-icon: false
-#    # This is to include fontawesome and academic icons in the headers:
-#    #include-in-header: "_includes/header.html"
-#
-
-
-
-
-
 
 project:
-  type: website
-  output-dir: _build
+  type: book
+  #output-dir: _book # by default
 
-# tell quarto to read the generated sidebar
-#metadata-files:
-#  - _sidebar.yml
+#
+# BOOK
+#
 
-website:
-  title: "This is a site"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - contact.md
-      - python-example.qmd
-      - demo-notebook.ipynb
-      - reference/index.qmd
+book:
+  title: "My Quarto Book" # controls name of PDF file in "_book" dir
+  author: "Your Name Here"
+  date: "6/10/2024"
+
+  site-url: https://s2t2.github.io/quarto-book-template/
+  repo-url: https://github.com/s2t2/quarto-book-template
+  repo-branch: main
+  repo-actions: [edit, issue, source]
+
+  cover-image: cover.png
+  favicon: cover.png
+
+  chapters:
+    - index.qmd
+    - about.qmd
+    - contact.md
+    - article.md
+    # NOTE: EPUB and DOCX do not currently support parts. When rendering, the parts will be ignored.
+    #- part: "Code Execution"
+    - part: code-execution.md
+      chapters:
+        - python-example.qmd
+        #- r-example.qmd
+        - demo-notebook.ipynb
+    # auto documentation:
+    - reference/index.qmd
+
+  #appendices:
+  #  - tools.qmd
+  #  - resources.qmd
+
+  search: true
+  reader-mode: true
+  page-navigation: true # adds buttons at bottom of page
+  downloads: [pdf, epub]
+
+  # https://quarto.org/docs/websites/website-navigation.html#side-navigation
+  #sidebar:
+  #  style: docked # docked or floating
+  #  background: light
+
+  #page-footer:
+  #  left: |
+  #    This is a footer. &copy; 2024 Your Name Here.
+  #  right: |
+  #    This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+
+#
+# FORMAT
+#
 
 format:
   html:
-    theme: cosmo
+    # BOOTSWATCH THEME
+    # https://quarto.org/docs/output-formats/html-themes.html
+    # https://bootswatch.com/
+    #theme: yeti #superhero #litera #cosmo # [cosmo, styles.scss]
     #css: styles.css
+    theme:
+      light: yeti
+      dark: superhero
+
     toc: true
+    #toc-depth: 5
+    toc-location: right
+
+    code-copy: true # true, false, hover
+
+    #lightbox: true
+    #backgroundcolor: "#F8F7F0"
+
+    #anchor-sections: true
+    #smooth-scroll: true
+    #link-external-newwindow: true
+    #link-external-icon: false
+    # This is to include fontawesome and academic icons in the headers:
+    #include-in-header: "_includes/header.html"
+
+  pdf:
+    documentclass: scrreprt
+
+    # cite-method: biblatex
+
+    # https://quarto.org/docs/books/book-structure.html#creating-an-index
+    #include-in-header:
+    #  text: |
+    #    \usepackage{makeidx}
+    #    \makeindex
+    #include-after-body:
+    #  text: |
+    #    \printindex
+
+  epub:
+    cover-image: cover.png
 
 
 
 
+bibliography: references.bib
 
+# control caching of files
+# IPYNB files not executed by default
+#execute:
+#  freeze: false
+#  warning: false
 
+# a comments related plugin
+# https://web.hypothes.is/
+#comments:
+#  hypothesis: true
 
-
-
-
-
-
-
-
-
+# if you are using autodoc:
 # https://machow.github.io/quartodoc/get-started/basic-docs.html
 quartodoc:
   # the name used to import the package you want to create reference docs for
