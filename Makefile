@@ -14,20 +14,13 @@ autodoc:
 preview:
 	quarto preview docs/ --verbose
 
-# otherwise just run make build
+# builds all formats
 build:
 	quarto render docs/ --verbose
 
-#build-tex:
-#	quarto render docs/ --to latex
-#
-#build-pdf:
-#	quarto render docs/ --to pdf
-
-
 # can run after make build (may need to change name of PDF to match book name in the _config.yml)
 open-pdf:
-	open docs/_book/My-Quarto-Book.pdf
+	open docs/_book/my-book.pdf
 
 open-html:
 	open docs/_book/index.html

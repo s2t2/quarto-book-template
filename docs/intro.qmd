@@ -1,5 +1,0 @@
-# Introduction
-
-This is a book created from markdown and executable code.
-
-See @rossetti2023bots for additional discussion.

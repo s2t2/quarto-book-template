@@ -12,24 +12,63 @@
 
 project:
   type: book
-  #output-dir: _book # by default
+  output-dir: _book # by default
+  preview:
+    port: 5555 # use the same port instead of a new one each time
+    browser: true
 
 #
 # BOOK
+# https://quarto.org/docs/reference/projects/books.html#section
 #
 
 book:
   title: "My Quarto Book" # controls name of PDF file in "_book" dir
+  subtitle: "A Subtitle"
   author: "Your Name Here"
   date: "6/10/2024"
+  #abstract: "Lorem Ipsum"
+  #description: "Some HTML Metadata"
+  output-file: "my-book"
+  #edition: 3
 
   site-url: https://s2t2.github.io/quarto-book-template/
   repo-url: https://github.com/s2t2/quarto-book-template
   repo-branch: main
   repo-actions: [edit, issue, source]
 
-  cover-image: cover.png
-  favicon: cover.png
+  search: true
+  reader-mode: true
+  page-navigation: true # adds buttons at bottom of page
+  downloads: [pdf, epub]
+  #google-analytics: "G-XXXXXX"
+  #bread-crumbs: true
+
+  image: assets/cover.png
+  cover-image: assets/cover.png
+  favicon: assets/cover.png
+
+  navbar:
+    title: "Quarto Book Template"
+    #logo: cover.png
+    search: true
+    pinned: true
+    collapse: true
+    right:
+      - icon: github
+        href: https://github.com/s2t2/quarto-book-template
+        text: GitHub Repo
+      - icon: globe
+        href: https://prof-rossetti.org
+        text: Academic Site
+    #left:
+    #  - icon: github
+    #    href: https://github.com/s2t2/quarto-book-template
+    #    text: GitHub Repo Left
+    #  - icon: globe
+    #    href: https://prof-rossetti.org
+    #    text: Academic Site Left
+
 
   chapters:
     - index.qmd
@@ -50,10 +89,6 @@ book:
   #  - tools.qmd
   #  - resources.qmd
 
-  search: true
-  reader-mode: true
-  page-navigation: true # adds buttons at bottom of page
-  downloads: [pdf, epub]
 
   # https://quarto.org/docs/websites/website-navigation.html#side-navigation
   #sidebar:
@@ -76,15 +111,17 @@ format:
     # BOOTSWATCH THEME
     # https://quarto.org/docs/output-formats/html-themes.html
     # https://bootswatch.com/
-    #theme: yeti #superhero #litera #cosmo # [cosmo, styles.scss]
+    #theme: yeti #yeti #superhero #litera #cosmo # [cosmo, styles.scss]
     #css: styles.css
     theme:
-      light: yeti
-      dark: superhero
+      light: litera #flatly #yeti
+      dark: [superhero, assets/dark-theme-overrides.scss] #darkly #superhero
 
     toc: true
+    #toc-expand: 2
     #toc-depth: 5
-    toc-location: right
+    #toc-location: right
+    number-sections: false
 
     code-copy: true # true, false, hover
 

@@ -1,6 +1,10 @@
+---
+#format:
+#  html:
+#    number-sections: true
+---
 
-
-# My Article - Topic Here
+# My Article Topic
 
 ## Abstract {.unnumbered}
 
@@ -34,7 +38,7 @@ We trained some models.
 
 Here's how this apples. Who cares?
 
-# References {.unnumbered}
+## References {.unnumbered}
 
 ::: {#refs}
 :::
