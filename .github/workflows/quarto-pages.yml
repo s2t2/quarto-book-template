@@ -1,16 +1,13 @@
 
 # https://jupyterbook.org/en/stable/publish/gh-pages.html
 
-name: deploy-book
+name: quarto-pages
 
 on:
   push:
     branches:
     - main
-    # If your git repository has the Jupyter Book within some-subfolder next to
-    # unrelated files, you can make this run only if a file within that specific
-    # folder has been modified.
-    #
+    # run only if a file within that specific folder has been modified:
     #paths:
     #- docs/**
 
@@ -38,47 +35,15 @@ jobs:
       with:
         python-version: 3.11
 
-    # INSTALL PACKAGE DEPENDENCIES (IF YOU ARE DOCUMENTING YOUR PACKAGE)
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+    ## INSTALL PACKAGE DEPENDENCIES (IF YOU ARE DOCUMENTING YOUR PACKAGE)
+    #- name: Install dependencies
+    #  run: |
+    #    pip install -r requirements.txt
 
     # INSTALL DOCUMENTATION DEPENDENCIES
     - name: Install docs dependencies
       run: |
         pip install -r docs/requirements.txt
-
-    #
-    # R STUFF
-    # https://github.com/jhelvy/jhelvy_quarto/blob/main/.github/workflows/main.yml
-    #
-
-    #- uses: r-lib/actions/setup-r@v2
-    #- uses: r-lib/actions/setup-pandoc@v2
-    #- name: Query dependencies
-    #  run: |
-    #    options(download.file.method = "libcurl")
-    #    options(repos = "https://cran.rstudio.com")
-    #    install.packages('remotes')
-    #    saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
-    #  shell: Rscript {0}
-    #
-    #- name: Cache R packages
-    #  uses: actions/cache@v1
-    #  with:
-    #    path: ${{ env.R_LIBS_USER }}
-    #    key: macOS-r-3.6-${{ hashFiles('.github/depends.Rds') }}
-    #    restore-keys: macOS-r-3.6-
-    #
-    #- name: Install system dependencies
-    #  run: |
-    #    brew install libgit2
-    #
-    #- name: Install dependencies
-    #  run: |
-    #    install.packages("remotes")
-    #    remotes::install_deps(dependencies = TRUE)
-    #  shell: Rscript {0}
 
     #
     # QUARTO STUFF
@@ -96,7 +61,7 @@ jobs:
         # uncomment below and fill to pin a version
         # version: SPECIFIC-QUARTO-VERSION-HERE
 
-    # SAVE AS HTML (SEE docs/_build OR docs/_book)
+    # SAVE AS HTML (see docs/_build)
     - name: Build the book
       run: |
         quarto render docs/

@@ -3,47 +3,5 @@
 .DS_Store
 
 docs/_site
-docs/_build/
 docs/_book/
-
-
-# https://quarto.org/docs/projects/code-execution.html#cache
-# cache directory contains cached outputs (to hasten build time)
-# can consider checking in this directory (for faster production builds)
-docs/.jupyter_cache
-
-# https://quarto.org/docs/projects/code-execution.html
-# freeze directory contains cached outputs (to hasten build time)
-# can consider checking in the _freeze directory (for faster production builds)
-docs/_freeze
-# not working?
-
-
-
-#docs/.quarto
-
-# wtf are these files and why are they in the docs folder not the build folder?
-# (they are temporary files that appear during PDF generation and/or preview?)
-docs/*.aux
-docs/*.bcf
-docs/*.logs
-docs/*.bcf
-docs/*.html
-docs/*.log
-docs/*.run.xml
-docs/*.tex
-docs/*.toc
-
-#ignore PDF output:
-docs/*.pdf
-
-
-
-
-
-
-
-
-
-__pycache__/
-.pytest_cache
+docs/_build/
