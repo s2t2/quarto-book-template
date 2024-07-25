@@ -1,20 +1,69 @@
 project:
   type: book
+  output-dir: "_build" # '_book' by default
+  preview:
+    port: 4567
+    browser: true
 
+# https://quarto.org/docs/books/
+# https://quarto.org/docs/reference/projects/books.html
 book:
   title: "My Book"
   author: "Norah Jones"
-  date: "7/24/2024"
+  date: "last-modified" # "7/24/2024"
+  date-format: "iso"
+  #doi: "...."
+  #isbn: "..."
+  #issn: "..."
+  #edition: "v2"
+
+  site-url: https://s2t2.github.io/quarto-website-template/
+  repo-url: https://github.com/s2t2/quarto-website-template
+  repo-branch: main
+  repo-subdir: docs
+  repo-actions: [edit, issue, source]
+
+  downloads: [pdf, epub, docx]
+  #sharing: [twitter, facebook]
+  search: true
+  open-graph: true
+
+  #google-analytics: "G-..."
+  #cover-image: cover.png
+  #favicon: favicon.ico
+
+  # https://quarto.org/docs/websites/website-navigation.html#side-navigation
+  sidebar:
+    logo: quarto-dark-bg.jpeg
+    #title: false # doesn't work? (see custom CSS in styles.css to hide)
+    #tools:
+    #  #- icon: twitter
+    #  #  href: https://twitter.com
+    #  - icon: github
+    #    menu:
+    #      - text: Source Code
+    #        href:  https://s2t2.github.io/quarto-website-template/
+    #      - text: Report an Issue
+    #        href:  https://s2t2.github.io/quarto-website-template/issues
+
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
 
+  # shows up at bottom of page
+  #body-footer: "&copy; Copyright 2024, Your Name Here"
+
+  #page-footer:
+  #  center: "&copy; Copyright 2024, Your Name Here"
+
+
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
+    css: styles.css
   pdf:
     documentclass: scrreprt
