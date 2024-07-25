@@ -22,15 +22,23 @@ book:
   repo-branch: main
   repo-subdir: docs
   repo-actions: [edit, issue, source]
-
   downloads: [pdf, epub, docx]
-  #sharing: [twitter, facebook]
-  search: true
-  open-graph: true
 
-  #google-analytics: "G-..."
   #cover-image: cover.png
   #favicon: favicon.ico
+
+  #sharing: [twitter, facebook]
+
+  # https://quarto.org/docs/websites/website-tools.html#open-graph
+  open-graph: true
+
+  # https://quarto.org/docs/reference/projects/books.html#search
+  search: true
+    #location: sidebar # navbar, sidebar
+    #type: textbox # overlay, textbox
+
+  # https://quarto.org/docs/websites/website-tools.html#google-analytics
+  #google-analytics: "G-..."
 
   # https://quarto.org/docs/websites/website-navigation.html#side-navigation
   sidebar:
@@ -63,7 +71,11 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    # https://quarto.org/docs/output-formats/html-themes.html
+    theme:
+      light: default #flatly
+      dark: darkly
+
     css: styles.css
   pdf:
     documentclass: scrreprt
