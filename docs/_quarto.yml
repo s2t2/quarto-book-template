@@ -57,8 +57,22 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+
+    - part: "Part I"
+      #href:  part-1/index.qmd
+      chapters:
+        - part-1/chap-1.qmd
+        - part-1/chap-2.qmd
+
+    #- part: "Part II"
+    #  #href:  part-2/index.qmd
+    #  chapters:
+    #    - part-2/chap-3.qmd
+    #    - part-2/chap-4.qmd
+
     - summary.qmd
     - references.qmd
+
 
   # shows up at bottom of page
   #body-footer: "&copy; Copyright 2024, Your Name Here"
