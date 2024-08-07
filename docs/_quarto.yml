@@ -17,18 +17,17 @@ book:
   #issn: "..."
   #edition: "v2"
 
-  site-url: https://s2t2.github.io/quarto-website-template/
-  repo-url: https://github.com/s2t2/quarto-website-template
+  # https://quarto.org/docs/websites/website-tools.html#google-analytics
+  #google-analytics: "G-..."
+
+  site-url: https://s2t2.github.io/quarto-book-template/
+  repo-url: https://github.com/s2t2/quarto-book-template
   repo-branch: main
   repo-subdir: docs
   repo-actions: [edit, issue, source]
   downloads: [pdf, epub, docx]
 
-  #cover-image: cover.png
-  #favicon: favicon.ico
-
-  #sharing: [twitter, facebook]
-
+  sharing: [twitter, facebook]
   # https://quarto.org/docs/websites/website-tools.html#open-graph
   open-graph: true
 
@@ -37,12 +36,12 @@ book:
     #location: sidebar # navbar, sidebar
     #type: textbox # overlay, textbox
 
-  # https://quarto.org/docs/websites/website-tools.html#google-analytics
-  #google-analytics: "G-..."
+  cover-image: assets/images/cover.png
+  #favicon: assets/images/favicon.ico
 
   # https://quarto.org/docs/websites/website-navigation.html#side-navigation
   sidebar:
-    logo: quarto-dark-bg.jpeg
+    logo: assets/images/quarto-dark-bg.jpeg
     #title: false # doesn't work? (see custom CSS in styles.css to hide)
     #tools:
     #  #- icon: twitter
@@ -90,6 +89,6 @@ format:
       light: default #flatly
       dark: darkly
 
-    css: styles.css
+    css: assets/styles.css
   pdf:
     documentclass: scrreprt
