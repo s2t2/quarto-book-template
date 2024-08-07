@@ -1,15 +1,10 @@
 
-# https://jupyterbook.org/en/stable/publish/gh-pages.html
-
 name: quarto-pages
 
 on:
   push:
     branches:
     - main
-    # run only if a file within that specific folder has been modified:
-    #paths:
-    #- docs/**
 
   # make this workflow manually runnable
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
@@ -23,7 +18,7 @@ jobs:
       pages: write
       id-token: write
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     #
     # PYTHON STUFF
@@ -34,11 +29,6 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: 3.11
-
-    ## INSTALL PACKAGE DEPENDENCIES (IF YOU ARE DOCUMENTING YOUR PACKAGE)
-    #- name: Install dependencies
-    #  run: |
-    #    pip install -r requirements.txt
 
     # INSTALL DOCUMENTATION DEPENDENCIES
     - name: Install docs dependencies
@@ -52,16 +42,13 @@ jobs:
     # INSTALL QUARTO
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
-      #env:
-      #  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        # To install LaTeX to build PDF book
-        # (to get past errors on the CI build)
+        # Install LaTeX to build PDF book (to make the build pass)
         tinytex: true
-        # uncomment below and fill to pin a version
-        # version: SPECIFIC-QUARTO-VERSION-HERE
+        # optionally pin a version:
+        # version: pre-release
 
-    # SAVE AS HTML (see docs/_build)
+    # RENDER HTML AND PDF (see docs/_build)
     - name: Build the book
       run: |
         quarto render docs/
@@ -72,11 +59,11 @@ jobs:
 
     # Upload the book's HTML as an artifact
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: "docs/_build"
 
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
