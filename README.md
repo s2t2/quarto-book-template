@@ -86,6 +86,6 @@ open docs/_build/index.pdf
 
 ## Publishing to GitHub Pages
 
-We are using the ["quarto-pages.yml" workflow configuration file](/.github/workflows/quarto-pages.yml) to deploy the site to GitHub Pages when new commits are pushed to the main branch.
+We are using the ["deploy.yml" workflow configuration file](/.github/workflows/deploy.yml) to deploy the site to GitHub Pages when new commits are pushed to the main branch.
 
 In order for this to work, you first need to configure your GitHub Pages repo settings to publish via GitHub Actions.

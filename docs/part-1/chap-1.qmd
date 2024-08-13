@@ -1,5 +1,0 @@
-# Chapter 1
-
-This is a chapter.
-
-We can't go any lower than chapter level.

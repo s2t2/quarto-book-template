@@ -1,7 +1,0 @@
-# Chapter 2
-
-This is another chapter.
-
-This is an image:
-
-![an example image](/assets/images/quarto-dark-bg.jpeg)

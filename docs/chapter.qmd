@@ -1,0 +1,5 @@
+# A Chapter
+
+This is a chapter.
+
+With the quarto book project type, we can't go any lower than chapter level.

@@ -1,25 +1,3 @@
-# Summary {.unnumbered}
+# Summary
 
 In summary, this book has no content whatsoever.
-
-Here are some [call outs](https://quarto.org/docs/authoring/callouts.html).
-
-::: {.callout-note}
-Note that there are five types of callouts, including: `note`, `warning`, `important`, `tip`, and `caution`.
-:::
-
-::: {.callout-warning}
-This is a callout.
-:::
-
-::: {.callout-important}
-This is a callout.
-:::
-
-::: {.callout-tip}
-This is a callout.
-:::
-
-::: {.callout-tip title="Tip with Title"}
-This should be an example of a callout with a caption. So add a caption!
-:::

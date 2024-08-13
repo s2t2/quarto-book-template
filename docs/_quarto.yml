@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: "_build" # '_book' by default
+  output-dir: "_build"
   preview:
     port: 4567
     browser: true
@@ -36,32 +36,26 @@ book:
     #location: sidebar # navbar, sidebar
     #type: textbox # overlay, textbox
 
-  cover-image: assets/images/cover.png
-  #favicon: assets/images/favicon.ico
+  cover-image: images/cover.png
+  #favicon: images/favicon.ico
 
   # https://quarto.org/docs/websites/website-navigation.html#side-navigation
   sidebar:
-    logo: assets/images/quarto-dark-bg.jpeg
-    #title: false # doesn't work? (see custom CSS in styles.css to hide)
-    #tools:
-    #  #- icon: twitter
-    #  #  href: https://twitter.com
-    #  - icon: github
-    #    menu:
-    #      - text: Source Code
-    #        href:  https://s2t2.github.io/quarto-website-template/
-    #      - text: Report an Issue
-    #        href:  https://s2t2.github.io/quarto-website-template/issues
+    logo: images/quarto-dark-bg.jpeg
+
 
   chapters:
     - index.qmd
     - intro.qmd
 
+    - chapter.qmd
+    - another-chapter.qmd
+
     - part: "Part I"
       #href:  part-1/index.qmd
       chapters:
-        - part-1/chap-1.qmd
-        - part-1/chap-2.qmd
+        - part-1/chapter.qmd
+        - part-1/another-chapter.qmd
 
     #- part: "Part II"
     #  #href:  part-2/index.qmd
@@ -72,6 +66,11 @@ book:
     - summary.qmd
     - references.qmd
 
+    - "-------------"
+
+  appendices:
+    - appendix.qmd
+    - another-appendix.qmd
 
   # shows up at bottom of page
   #body-footer: "&copy; Copyright 2024, Your Name Here"
@@ -89,6 +88,6 @@ format:
       light: default #flatly
       dark: darkly
 
-    css: assets/styles.css
+    #css: styles.css
   pdf:
     documentclass: scrreprt
