@@ -10,3 +10,15 @@
   display: none;
 }
 */
+
+/* display a border on the left sidebar */
+#quarto-sidebar {
+    border-right: 1px solid #cccccc;
+}
+
+/* display a top border on the footer
+.footer {
+    border-top: 2px solid #cccccc;
+}
+
+*/
